@@ -1,0 +1,7 @@
+var num = Math.random() * 10
+num = num.toString()
+var nume = num.split('.')
+var numer = nume[0]
+while (numer)
+console.log(numer)
+console.log(eval(`${numer} + 2`))
