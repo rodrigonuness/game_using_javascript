@@ -4,117 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            overflow: hidden;
-        }
-        div#pers{ /*l - 0  a- -20*/
-            width: 20px;
-            height: 20px;
-            margin-left: 182px;
-            margin-top: -220px;
-            animation: change-color 1s infinite;
-        }
-        @keyframes change-color{
-            from{
-                background-color: red;
-            }
-            to{
-                background-color: darkblue;
-            }
-        }
-        #cheg{
-            
-            width: 20px;
-            height: 20px;
-            background-color: coral;
-            position: fixed;
-            margin-top: 0px;
-            margin-left: 0px;
-            position:initial;
-        }
-        #corp{
-            border: 1px black solid;
-            width: 400px;
-            height: 400px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body id="body">
     
     <div id="corp"><div id="cheg"></div></div>
     <div id="pers"></div>
-    <script>
-        var cima1 = -220
-        var cima2 = 182
-        var body = document.getElementById('body')
-        var pers = document.getElementById('pers')
-        document.addEventListener('keydown', function(txto) {
-        var tecla = event.keyCode;
-        if(tecla === 38){
-            clicou()
-        }
-        if(tecla === 40){
-            clicou1()
-        }
-        if(tecla === 39){
-            clicou2()
-        }
-        if(tecla === 37){
-            clicou3()
-        }
-
-        function clicou3(){
-            cima2 = cima2 - 2
-            pers.style.marginLeft = `${cima2}px`
-            console.log(cima1)
-            console.log(cima2)
-
-
-        }
-        function clicou2(){
-            cima2 = cima2 + 2
-
-            pers.style.marginLeft = `${cima2}px`
-            console.log(cima1)
-            console.log(cima2)
-
-
-        }
-        function clicou1(){
-            cima1 = cima1 + 2
-
-            pers.style.marginTop = `${cima1}px`
-            console.log(cima1)
-            console.log(cima2)
-
-
-        }
-        function clicou(){
-            cima1 = cima1 - 2
-
-            pers.style.marginTop = `${cima1}px`
-            console.log(cima1)
-            console.log(cima2)
-        }
-        if(cima1 == -400 && cima2 == 2){
-            body.style.backgroundColor = "red"
-        }
-        else{
-            body.style.backgroundColor = "white"
-        } 
-        if (cima2 == 378) {
-            cima2 = 0
-        }else{
-            if(cima2 == 0){cima2 = 378}
-        }
-        if (cima1 == -22) {
-            cima1 = -402
-        }else{
-            if(cima1 == -402){cima1 = -22}
-        }
-        
-})
+    <script src="script.js">
     </script>
 </body>
 </html>

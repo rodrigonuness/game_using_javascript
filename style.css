@@ -1,0 +1,34 @@
+
+        body{
+            overflow: hidden;
+        }
+        div#pers{ /*l - 0  a- -20*/
+            width: 20px;
+            height: 20px;
+            margin-left: 185px;
+            margin-top: -220px;
+            animation: change-color 1s infinite;
+        }
+        @keyframes change-color{
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: darkblue;
+            }
+        }
+        #cheg{
+            
+            width: 20px;
+            height: 20px;
+            background-color: coral;
+            position: fixed;
+            margin-top: 0px;
+            margin-left: 0px;
+            position:initial;
+        }
+        #corp{
+            border: 1px black solid;
+            width: 400px;
+            height: 400px;
+        }
