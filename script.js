@@ -18,7 +18,7 @@
         if(tecla === 37 && cima2 !== 0){
             clicou3()
         }
-
+    })
         function clicou3(){
             cima2 = cima2 - 5
             pers.style.marginLeft = `${cima2}px`
@@ -58,5 +58,50 @@
         else{
             quadrado.style.backgroundColor = "white"
         } 
+        function rand(){
+            var num = Math.random() * 1000
+            num = num.toString()
+            var nume = num.split('.')
+            var numerx = nume[0]
+            var tntx = numerx.split("")
+            var numerx = `${tntx[0]}${tntx[1]}5`
+            while(numerx > 380){
+            var num = Math.random() * 1000
+            num = num.toString()
+            var nume = num.split('.')
+            var numerx = nume[0]
+            var tntx = numerx.split("")
+            var numerx = `${tntx[0]}${tntx[1]}5`
+        }
+
+
+
+             var num = Math.random() * 1000
+             num = num.toString()
+             var nume = num.split('.')
+             var numery = nume[0]
+            var tnty = numery.split("")
+            var numery = `${tntx[0]}${tntx[1]}5`
+             while(numery > 360){
+             var num = Math.random() * 1000
+             num = num.toString()
+             var nume = num.split('.')
+             var numery = nume[0] 
+            var tnty = numery.split("")
+            var numery = `${tnty[0]}${tnty[1]}5`
+        }
+
+
+
+            console.log(`${numerx}, ${numery}`)
+            var vitoria = document.createElement('div')
+            quadrado.appendChild(vitoria)
+            vitoria.style.marginLeft = `${numerx}px` // 0 ate 380
+            vitoria.style.marginTop = `${numery}px` //0 ate  380
+            vitoria.style.backgroundColor = "blue"
+            vitoria.style.width = "20px"
+            vitoria.style.height = "20px"
+            console.log(numerx, numery)
+        }
         
-})
+        rand()
