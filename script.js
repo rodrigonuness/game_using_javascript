@@ -1,63 +1,76 @@
-
-        var cima1 = -220
-        var cima2 = 185
-        var body = document.getElementById('body')
-        var pers = document.getElementById('pers')
-        var quadrado = document.getElementById('corp')
-        document.addEventListener('keydown', function(txto) {
-        var tecla = event.keyCode;
-        if(tecla === 38 && cima1 !== -400){
-            clicou()
+		var axisY = -220
+        var axisX = 185
+		
+        const body = document.getElementById('body')
+        const character = document.getElementById('character')
+        const cube = document.getElementById('field')
+		
+		
+        document.addEventListener('keydown', function(keyPressed) {
+			
+			var key = event.keyCode
+			
+			if(key === 38 && axisY !== -405){
+				up()
+			}
+		
+			if(key === 40 && axisY !== -25){
+				down()
+			}
+			
+			if(key === 39 && axisX !== 385){
+				right()
+			}
+			
+			if(key === 37 && axisX !== 5){
+				left()
+			}
+			
+			if(key === 68){
+				cube.style.backgroundColor = "rgb(23,23,23)"
+				body.style.backgroundColor = "black"
+				cube.style.animation = "dracula 2s infinite"
+			}
+		
+			if(key === 70){
+				cube.style.backgroundColor = "rgb(253,253,253)"
+				body.style.backgroundColor = "white"
+				cube.style.animation = "none"
+			}
+		})
+		
+		
+        function left(){
+            axisX = axisX - 5
+            character.style.marginLeft = `${axisX}px`
+            console.log(axisY)
+            console.log(axisX)
         }
-        if(tecla === 40 && cima1 !== -20){
-            clicou1()
+		
+        function right(){
+            axisX = axisX + 5
+
+            character.style.marginLeft = `${axisX}px`
+            console.log(axisY)
+            console.log(axisX)
         }
-        if(tecla === 39 && cima2 !== 380){
-            clicou2()
+		
+        function down(){
+            axisY = axisY + 5
+			
+            character.style.marginTop = `${axisY}px`
+            console.log(axisY)
+            console.log(axisX)
         }
-        if(tecla === 37 && cima2 !== 0){
-            clicou3()
+		
+        function up(){
+            axisY = axisY - 5
+			
+            character.style.marginTop = `${axisY}px`
+            console.log(axisY)
+            console.log(axisX)
         }
-    })
-        function clicou3(){
-            cima2 = cima2 - 5
-            pers.style.marginLeft = `${cima2}px`
-            console.log(cima1)
-            console.log(cima2)
-
-
-        }
-        function clicou2(){
-            cima2 = cima2 + 5
-
-            pers.style.marginLeft = `${cima2}px`
-            console.log(cima1)
-            console.log(cima2)
-
-
-        }
-        function clicou1(){
-            cima1 = cima1 + 5
-
-            pers.style.marginTop = `${cima1}px`
-            console.log(cima1)
-            console.log(cima2)
-
-
-        }
-        function clicou(){
-            cima1 = cima1 - 5
-
-            pers.style.marginTop = `${cima1}px`
-            console.log(cima1)
-            console.log(cima2)
-        }
-        if(cima1 == -400 && cima2 == 0){
-            quadrado.style.backgroundColor = "red"
-        }
-        else{
-            quadrado.style.backgroundColor = "white"
-        } 
+		
         function rand(){
             var num = Math.random() * 1000
             num = num.toString()
@@ -76,17 +89,17 @@
 
 
 
-             var num = Math.random() * 1000
-             num = num.toString()
-             var nume = num.split('.')
-             var numery = nume[0]
+            var num = Math.random() * 1000
+            num = num.toString()
+            var nume = num.split('.')
+            var numery = nume[0]
             var tnty = numery.split("")
             var numery = `${tntx[0]}${tntx[1]}5`
-             while(numery > 360){
-             var num = Math.random() * 1000
-             num = num.toString()
-             var nume = num.split('.')
-             var numery = nume[0] 
+            while(numery > 360){
+            var num = Math.random() * 1000
+            num = num.toString()
+            var nume = num.split('.')
+            var numery = nume[0] 
             var tnty = numery.split("")
             var numery = `${tnty[0]}${tnty[1]}5`
         }
@@ -95,10 +108,10 @@
 
             console.log(`${numerx}, ${numery}`)
             var vitoria = document.createElement('div')
-            quadrado.appendChild(vitoria)
-            vitoria.style.marginLeft = `${numerx}px` // 0 ate 380
-            vitoria.style.marginTop = `${numery}px` //0 ate  380
-            vitoria.style.backgroundColor = "blue"
+            cube.appendChild(vitoria)
+            vitoria.style.marginLeft = `${numerx}px` 
+            vitoria.style.marginTop = `${numery}px` 
+            vitoria.style.backgroundColor = "#ffd700"
             vitoria.style.width = "20px"
             vitoria.style.height = "20px"
             console.log(numerx, numery)
