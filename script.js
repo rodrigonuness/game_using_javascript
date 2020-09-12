@@ -4,6 +4,8 @@
         const body = document.getElementById('body')
         const character = document.getElementById('character')
         const cube = document.getElementById('field')
+        var vitoria = document.createElement('div')
+        cube.appendChild(vitoria)
 		
 		
         document.addEventListener('keydown', function(keyPressed) {
@@ -107,8 +109,6 @@
 
 
             console.log(`${numerx}, ${numery}`)
-            var vitoria = document.createElement('div')
-            cube.appendChild(vitoria)
             vitoria.style.marginLeft = `${numerx}px` 
             vitoria.style.marginTop = `${numery}px` 
             vitoria.style.backgroundColor = "#ffd700"
@@ -116,5 +116,6 @@
             vitoria.style.height = "20px"
             console.log(numerx, numery)
         }
+
         
-        rand()
+        window.setInterval(rand, 3000)
