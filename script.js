@@ -39,8 +39,8 @@
 			}
 		
 			if(key === 67){
-				cube.style.backgroundColor = "rgb(253,253,253)"
-				body.style.backgroundColor = "white"
+		cube.style.backgroundColor = "rgb(253,253,253)"
+		body.style.backgroundColor = "white"
                 cube.style.animation = "none"
                 color.innerHTML = `press "d" to dark`
 			}
