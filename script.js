@@ -1,4 +1,4 @@
-	var axisY = -220
+		var axisY = -220
         var axisX = 185
 		
         const body = document.getElementById('body')
@@ -39,8 +39,8 @@
 			}
 		
 			if(key === 67){
-		cube.style.backgroundColor = "rgb(253,253,253)"
-		body.style.backgroundColor = "white"
+				cube.style.backgroundColor = "rgb(253,253,253)"
+				body.style.backgroundColor = "white"
                 cube.style.animation = "none"
                 color.innerHTML = `press "d" to dark`
 			}
@@ -245,8 +245,6 @@
             victory.style.display = "flex"
 
 
-            var y = eval(axisY.toString().replace("-", ""))
-            var x = eval(axisX.toString().replace("-", ""))
             cube.style.backgroundColor = "rgba(255,255,255,0)"
             points.innerHTML = `${point}`
         }
