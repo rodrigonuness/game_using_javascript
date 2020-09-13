@@ -1,4 +1,4 @@
-		var axisY = -220
+	var axisY = -220
         var axisX = 185
 		
         const body = document.getElementById('body')
