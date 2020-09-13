@@ -1,4 +1,4 @@
-		var axisY = -220
+	var axisY = -220
         var axisX = 185
 		
         const body = document.getElementById('body')
@@ -32,15 +32,15 @@
 			}
 			
 			if(key === 68){
-				cube.style.backgroundColor = "rgb(0,0,0)"
-				body.style.backgroundColor = "black"
+		cube.style.backgroundColor = "rgb(0,0,0)"
+		body.style.backgroundColor = "black"
                 cube.style.animation = "dracula 2s infinite"
                 color.innerHTML = `press "c" to clear`
 			}
 		
 			if(key === 67){
-				cube.style.backgroundColor = "rgb(253,253,253)"
-				body.style.backgroundColor = "white"
+		cube.style.backgroundColor = "rgb(253,253,253)"
+		body.style.backgroundColor = "white"
                 cube.style.animation = "none"
                 color.innerHTML = `press "d" to dark`
 			}
